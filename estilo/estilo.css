@@ -1,0 +1,9 @@
+fieldset{
+	text-align: left;
+	width: 300px;
+	margin:auto;
+}
+
+fieldset input, fieldset select, fieldset textarea{
+	width: 100%;
+}

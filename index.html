@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Formulários em HTML</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+	<script type="text/javascript">
+		function validar(){
+			var msg = "Erro! Preencha os seguintes campos:\n";
+			if(document.getElementById("nome").value.length <= 0){
+				msg += "\nPreencha o campo nome";
+			}
+			
+			if(document.getElementById("email").value.length <= 0){
+				msg += "\nPreencha o campo email";
+			}
+			
+			if(document.getElementById("senha").value.length <= 0){
+				msg += "\nPreencha o campo senha";
+			}
+			
+			if(document.getElementById("nascimento").value.length <= 0){
+				msg += "\nPreencha o campo data de nascimento";
+			}
+			
+			if(msg != "Erro! Preencha os seguintes campos:\n"){
+				alert(msg);
+				return false;
+			}
+		}
+		
+		function validarCampo(field){
+			
+		}
+		
+		function mascara_data(inputData, e){
+			if(document.all) // Internet Explorer
+				var tecla = event.keyCode;
+			else //Outros Browsers
+				var tecla = e.which;
+			
+			if(tecla >= 47 && tecla < 58){ // numeros de 0 a 9 e "/"
+				var data = inputData.value;
+				if (data.length == 2 || data.length == 5){
+					data += '/';
+					inputData.value = data;
+				}
+			}
+			else if(tecla == 8 || tecla == 0) // Backspace, Delete e setas direcionais(para mover o cursor, apenas para FF)
+				return true;
+			else
+				return false;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="cadastro">
+        <fieldset>
+            <legend>Cadastro Web</legend>
+
+            <form name = "frm_cadastro" method = "POST" action="salvarReserva.php" onSubmit="return validar();">
+            
+                <label for="nome" >Nome: </label><br />
+                <input id="nome" type="text" name="txtNome" required placeholder="Digite seu nome"/><br />
+
+                <input type="submit" value="Cadastrar"/>
+
+            </form>
+
+        </fieldset>
+    </div>
+</body>
+
+</html>
