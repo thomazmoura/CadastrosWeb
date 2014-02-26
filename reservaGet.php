@@ -7,9 +7,10 @@
 
 <body>
 	<?php
-		if(isset($_POST['txtNome'])){
-			echo('<h3>Seja bem-vindo, ' . $_POST['txtNome'] . '</h3>'); 
-		}
+		if(isset($_GET['nome']))
+			echo('<h3>Seja bem-vindo, ' . $_GET['nome'] . '</h3>'); 
+		else
+			echo('<h3>Não foi informado nenhum cadastro.</h3>'); 
 	?>
 </body>
 </html>
