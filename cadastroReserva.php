@@ -40,7 +40,7 @@
 			else //Outros Browsers
 				var tecla = e.which;
 			
-			if(tecla >= 47 && tecla < 58){ // numeros de 0 a 9 e "/"
+			if(tecla >= 48 && tecla < 58){ // numeros de 0 a 9 e "/"
 				var data = inputData.value;
 				if (data.length == 2 || data.length == 5){
 					data += '/';
@@ -72,7 +72,7 @@
                 <input id="senha" type="password" name="txtSenha" required placeholder="Digite sua senha"/><br />
                 
                 <label for="nascimento">Data de nascimento: </label><br />
-                <input id="nascimento" name="txtNascimento" type="text" onKeyPress="return mascara_data(this, event);"/><br />
+                <input id="nascimento" name="txtNascimento" type="text" onKeyPress="return mascara_data(this, event);" maxlength="10"/><br />
                 
                 <label for="idade" >Idade: </label><br />
                 <input id="idade" type="number" min="13" max="120"/><br />
