@@ -4,6 +4,7 @@
 	
 <!-- Podemos criar código PHP fora da tag HTML, contanto que não desejemos mostrar nada na página, como no exemplo da declaração/atribuição a seguir(isso é muito comum para atribuições iniciais) -->
 <?php
+	//Isso é um comentário PHP
 	//Criação de uma variável nome e atribuição do valor 'Fulanosvaldo' a ela, como esse valor é uma string, a variável $nome será tratada como string
 	$nome = 'Filanosvaldo';
 	//No exemplo a seguir passamos um valor inteiro, logo a variável será do tipo inteiro
